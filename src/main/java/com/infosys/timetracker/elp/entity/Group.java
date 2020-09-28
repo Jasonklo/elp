@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.io.Serializable;
@@ -21,7 +22,7 @@ public class Group implements Serializable {
     private Integer maintId;
     private Timestamp maintTs;
 
-    @OneToMany(mappedBy = "group")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "group")
     private List<Task> tasks;
 
     @OneToMany(mappedBy = "group")

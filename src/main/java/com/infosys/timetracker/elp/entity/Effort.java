@@ -1,6 +1,7 @@
 package com.infosys.timetracker.elp.entity;
 
 import lombok.Data;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -9,6 +10,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Data
+@RestResource(rel="effort", path="effort")
 public class Effort implements Serializable {
 
 

@@ -1,14 +1,20 @@
 package com.infosys.timetracker.elp.entity;
 
+import lombok.Data;
+import org.springframework.data.rest.core.annotation.RestResource;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+@Data
+@Entity
+@RestResource(rel="task", path="task")
 public class Task implements Serializable {
 
     @Id
     @GeneratedValue
-    private Character incidentId;
+    private String incidentId;
 
     @ManyToOne(fetch = FetchType.LAZY, optional=false)
     @JoinColumn(name="AppName", insertable = false, updatable = false)
