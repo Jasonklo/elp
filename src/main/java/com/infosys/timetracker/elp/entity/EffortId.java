@@ -9,8 +9,8 @@ import java.sql.Date;
     @Embeddable
     @Data
     public class EffortId implements Serializable {
-        private Integer empId;
+        private Long empId;
         private Date weekStart;
-        private Character intcidentId;
+        private String intcidentId;
 
     }

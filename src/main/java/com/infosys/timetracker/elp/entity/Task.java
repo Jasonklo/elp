@@ -24,22 +24,22 @@ public class Task implements Serializable {
     @JoinColumn(name="groupId", insertable = false, updatable = false)
     private Group group;
 
-    private Character incidentType;
-    private Character summary;
+    private String incidentType;
+    private String summary;
 
     @ManyToOne(fetch = FetchType.LAZY, optional=false)
     @JoinColumn(name="empId", insertable = false, updatable = false)
     private Employee employee;
     private Timestamp submitDate;
     private Timestamp closedDate;
-    private Character impact;
-    private Character resolution;
-    private Character resCateTier1;
-    private Character status;
+    private String impact;
+    private String resolution;
+    private String resCateTier1;
+    private String status;
     private Timestamp respondedDate;
-    private Character resCateTier3;
+    private String resCateTier3;
     private Timestamp targetDate;
-    private Integer maintId;
+    private int maintId;
     private Timestamp maintTs;
 
 

@@ -14,11 +14,11 @@ import java.util.List;
 public class Application {
 
     @Id
-    private Character appName;
+    private String appName;
 
-    private Character managerName;
-    private Character area;
-    private Integer maintId;
+    private String managerName;
+    private String area;
+    private int maintId;
     private Timestamp maintTs;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "application")

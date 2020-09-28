@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(scanBasePackages = "com.infosys.timetracker.elp")
+@SpringBootApplication
 //@EnableJpaRepositories(basePackageClasses = EmployeeRepository.class)
 
 public class ElpApplication {

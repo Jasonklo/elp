@@ -15,9 +15,9 @@ public class Employee implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer empId;
-    private Character cId;
-    private Character empName;
+    private Long empId;
+    private String cId;
+    private String empName;
 
     @Enumerated(EnumType.STRING)
     private Access access;
@@ -26,7 +26,7 @@ public class Employee implements Serializable {
     @JoinColumn(name = "groupId")
     private Group group;
 
-    private Integer maintId;
+    private int maintId;
     private Timestamp maintTs;
 
     @OneToMany(mappedBy = "task")

@@ -23,7 +23,7 @@ public class Effort implements Serializable {
     private Double fri;
     private Double sat;
     private Double sun;
-    private Integer maintId;
+    private int maintId;
     private Timestamp maintTs;
 
 }
